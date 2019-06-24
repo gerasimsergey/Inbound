@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             var item = Item(value: 4, section: category)
             rows.append(item)
             
-            // or create a new object that is identical (as per equatable) to an existing section
+            // or create a new object that is identical to an existing section
             category = Category(value: 1)
             let items = (1...3).map {
                 Item(value: $0, section: category)
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         
         dispatchAfter(seconds: 3) {
             
-            // let's fetch and update. item is a pointer.
+            // let's fetch then update an existing value (item is a pointer).
             let item = self.controller.sections[1].rows[2]
             item.subtitle = "THIS IS A GREAT ROW!"
             let indexPath = self.controller.indexPath(forRow: item)!
@@ -95,11 +95,14 @@ extension ViewController: UITableViewDataSource {
         let sections = controller.sections
         let section = sections[indexPath.section]
         let row = section.rows[indexPath.row]
+        
+        // lazy coding but good enough for demo
         if Int(row.name) == 4 || Int(row.name) == 5 {
             cell.textLabel?.textColor = .red
         } else {
             cell.textLabel?.textColor = .black
         }
+        
         cell.textLabel?.text = row.displayName
         cell.detailTextLabel?.text = row.subtitle
         return cell
