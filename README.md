@@ -3,6 +3,9 @@
 </p>
 
 <p align="center">
+    <a href="https://app.bitrise.io/app/9bdab7792cb297b7">
+        <img src="https://app.bitrise.io/app/9bdab7792cb297b7/status.svg?token=yCTYlgBCizaQWaVBcMoaGA" alt="Bitrise"/>
+    </a>
     <a href="https://img.shields.io/badge/carthage-compatible-brightgreen.svg">
         <img src="https://img.shields.io/badge/carthage-compatible-brightgreen.svg" alt="Carthage"/>
     </a>
