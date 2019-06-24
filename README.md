@@ -34,7 +34,7 @@ section.rows = SortedSet(sorted: rows) // we know they are already sorted (other
 tableController.insert(section: section) // immediately updates UI here. see below about settings up a SortedListController
 ```
 
-> Additional data added to your `tableController` will update the UI automatically, but only if the data is unique (as defined by your `Hashable` implementation). If the data is not unique, it is discarded. See [demo model](#demo-model) below.
+> Additional data added to your `tableController` will update the UI automatically, but only if the data is unique (as defined by your `Hashable` implementation). If the data is not unique, it is discarded. Yes, duplicates are possible and you are in control of that given that you are responsible for the implementation of `Hashable`. See [demo model](#demo-model) below.
 
 ### SortedListController
 
